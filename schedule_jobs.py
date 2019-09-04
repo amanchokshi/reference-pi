@@ -1,4 +1,4 @@
-from subprocess import call
+from subprocess import call 
 import argparse
 
 parser = argparse.ArgumentParser(description='Schedule some ORBCOMM observations')

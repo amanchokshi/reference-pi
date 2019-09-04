@@ -34,6 +34,10 @@ while this_date + obs_length - finish_date < obs_length:
     if num_tiles: line += ' --num_tiles=%d' %num_tiles
     control_script.write(line + '\n')
 
+    move_date = this_date + obs_length - timedelta(seconds=60)
+    line = 'at %s < move_leftovers.sh' %datetime.strftime(move_date,'%H:%M %d %b %Y')
+    control_script.write(line + '\n')
+ 
     this_date = this_date + obs_length - timedelta(seconds=60)
     line = 'at %s < reset_usb.sh' %datetime.strftime(this_date,'%H:%M %d %b %Y')
     control_script.write(line + '\n')
