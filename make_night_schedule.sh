@@ -1,6 +1,6 @@
-START=2019-09-04-13:20
-STOP=2019-09-04-13:40
-OBS_LENGHT=600
+START=2019-09-04-21:30
+STOP=2019-09-05-07:30
+OBS_LENGHT=1800
 
 python make_night_schedule.py --time_obs=$OBS_LENGHT --start_date=$START \
     --finish_date=$STOP --num_tiles=4

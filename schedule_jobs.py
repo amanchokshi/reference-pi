@@ -29,7 +29,7 @@ month_dict = {1:'Jan',2:'Feb',3:'Mar',4:'Apr',5:'May',6:'Jun',7:'Jul',8:'Aug',
 for tile in range(num_tiles):
     ##The command we want to run for a single tile
     tile_script = open('tile_%02d_%s.sh' %(tile,date),'w+')
-    tile_script.write("python RFE_record.py --time_obs=%d --tile_index=%d --date=%s" %(time_obs,tile,date))
+    tile_script.write("python RFE_record.py --time_obs=%d --tile_index=%d --date=%s && python move_leftovers.py" %(time_obs,tile,date))
     tile_script.close()
 
     at_script.write('at %s %s %s %s < tile_%02d_%s.sh\n' %(time,day,month_dict[int(month)],year,tile,date))
