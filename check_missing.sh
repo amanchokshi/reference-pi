@@ -1,5 +1,5 @@
 NUMBER_TILES=4
-DATA=data2/
+DATA=data/
 NUMBER_F=`ls $DATA/*/*.txt -1 | wc -l`
 
 echo "Total files in" $DATA "directory is" $NUMBER_F
