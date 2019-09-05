@@ -1,6 +1,13 @@
-START=2019-09-06-08:30
-STOP=2019-09-06-09:30
+# This script creates a queue of at jobs for a 24 hour period
+# Needs to be executed before 6:00AM everyday
+
 OBS_LENGHT=1800
+TODAY=`date +'%Y-%m-%d-%H:%M' -d '6am'`
+TOMORROW=`date +'%Y-%m-%d-%H:%M' -d '6am +1 day'`
+
+#START=2019-09-06-08:30
+#STOP=2019-09-06-09:30
+#OBS_LENGHT=1800
 
 python make_night_schedule.py --time_obs=$OBS_LENGHT --start_date=$START \
     --finish_date=$STOP --num_tiles=4

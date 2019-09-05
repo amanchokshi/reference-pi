@@ -1,5 +1,5 @@
 today=`date +'%Y-%m-%d-%H:%M'`
-msg='Status: Reference ['
+msg='Raspberry: Reference ['
 end=']'
 sub="${msg}${today}${end}"
 
