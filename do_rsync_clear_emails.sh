@@ -21,3 +21,5 @@ else
     at 06:20 < email_aman.sh
 
 fi
+
+rm check_missing_status.txt
