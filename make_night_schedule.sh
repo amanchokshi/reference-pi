@@ -17,4 +17,4 @@ chmod +x obs"_"$START"_"to"_"$STOP.sh
 sh obs"_"$START"_"to"_"$STOP.sh
 rm obs"_"$START"_"to"_"$STOP.sh
 
-echo "It is now" `date +'%H:%M'`"AM and I have submitted jobs for the next 24 hours to the atq." >> status.txt
+echo "It is " `date +'%H:%M'`"AM and I have submitted jobs for the next 24 hours to the atq." >> status.txt

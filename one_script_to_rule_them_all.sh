@@ -2,7 +2,7 @@
 
 # Creates and begins populating the status.txt file, which will be the body of the email.
 echo "touch status.txt" | at 05:40
-echo "printf \"Good morning Aman, Jack, Nichole!\n \nIt is 5:40AM and I've woken up to schedule a new day of jobs. \n \" >> status.txt" | at 05:40
+echo "printf \"Good morning Aman, Jack, Nichole!\n \nIt is 5:40AM and I've woken up to schedule a new day of jobs.\" >> status.txt" | at 05:40
 
 # Creates a queue of at jobs from 6AM-6AM.
 # Adds  line to status.txt, confirming that jobs for the next day are in the queue.
