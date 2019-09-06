@@ -13,9 +13,9 @@ at 05:45 < make_night_schedule.sh
 # If there are files missing, source do_rsync, but don't clear data. Send email to Aman, Jack, Nichole.
 # Emails are sent at 6:20AM
 
-echo "echo \"It is 6:05AM. Starting to check for missing data files from the last 24 hours.\" >> status.txt" | at 06:05
-at 06:06 < check_missing.sh
-at 06:07 < do_rsync_clear_emails.sh
+echo "echo \"It is 6:02AM. Starting to check for missing data files from the last 24 hours.\" >> status.txt" | at 06:02
+at 06:03 < check_missing.sh
+at 06:04 < do_rsync_clear_emails.sh
 
 # Clean up and get ready for next day
 echo "rm status.txt" | at 06:25
