@@ -1,5 +1,5 @@
 today=`date +'%Y-%m-%d-%H:%M'`
-msg='Raspberry: Reference ['
+msg='ERROR! Raspberry: Reference ['
 end=']'
 sub="${msg}${today}${end}"
 

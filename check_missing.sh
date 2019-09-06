@@ -24,7 +24,7 @@ else
     
     if [ $NUMBER_F != $(($NUMBER_TILES*48)) ]; then
         echo "Heeeelllllp! There are files missing in the data directory!" >> status.txt
-        echo "I have" $NUMBER_F "files instead of" $(($NUMBER_TILES*48))"." >> status.txt
+        echo "I see only" $NUMBER_F "files instead of" $(($NUMBER_TILES*48))"." >> status.txt
         echo "MISSING_FILES" >> check_missing_status.txt
     else
         echo "There are no missing files in the data directory. All "$NUMBER_F" files are ready to be transferred to Ozstar" >> status.txt 
