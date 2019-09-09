@@ -14,8 +14,10 @@ at 05:45 < make_night_schedule.sh
 
 echo "echo \"[6:00AM]: A new day begins \" >> /home/jline/ref.txt" |at 05:41
 echo "echo \"[6:02AM]: Checking for missing data files from the last 24 hours.\" >> /home/jline/ref.txt" | at 06:02
-at 06:03 < check_missing.sh
-at 06:04 < do_rsync_clear.sh
+at 06:03 < /home/jline/check_missing.sh
+at 06:04 < /home/jline/do_rsync_clear.sh
+
+echo "scp /home/jline/ref.txt achokshi@ozstar.swin.edu.au:/fred/oz048/achokshi/mwa_sats/data/status" | at 06:22
 
 # Clean up and get ready for next day
-echo "rm ref.txt" | at 06:25
+echo "rm /home/jline/ref.txt" | at 06:25
