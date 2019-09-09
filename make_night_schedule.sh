@@ -1,13 +1,13 @@
 # This script creates a queue of at jobs for a 24 hour period
 # Needs to be executed before 6:00AM everyday
 
-OBS_LENGHT=1800
-TODAY=`date +'%Y-%m-%d-%H:%M' -d '6am'`
-TOMORROW=`date +'%Y-%m-%d-%H:%M' -d '6am +1 day'`
+#OBS_LENGHT=1800
+#TODAY=`date +'%Y-%m-%d-%H:%M' -d '6am'`
+#TOMORROW=`date +'%Y-%m-%d-%H:%M' -d '6am +1 day'`
 
-#START=2019-09-06-14:37
-#STOP=2019-09-06-14:40
-#OBS_LENGHT=60
+START=2019-09-09-06:00
+STOP=2019-09-10-06:00
+OBS_LENGHT=1800
 
 
 python make_night_schedule.py --time_obs=$OBS_LENGHT --start_date=$START \
@@ -17,4 +17,4 @@ chmod +x obs"_"$START"_"to"_"$STOP.sh
 sh obs"_"$START"_"to"_"$STOP.sh
 rm obs"_"$START"_"to"_"$STOP.sh
 
-echo "It is" `date +'%H:%M'`"AM. I have submitted jobs for the next 24 hours to the atq." >> status.txt
+echo `date +'[%H:%M%p]'`": Submitted jobs for the next 24 hours to the atq." >> ref.txt

@@ -1,9 +1,8 @@
 # This needs to run at 5:30AM everyday.
 
 # Creates and begins populating the status.txt file, which will be the body of the email.
-echo "touch status.txt" | at 05:40
-echo "printf \"Good morning Aman, Jack, Nichole!\n \nIt is 5:30AM. I've woken up to schedule a new day of jobs.\n\" >> status.txt" | at 05:40
-
+echo "touch /home/jline/ref.txt" | at 05:40
+echo "echo \"[5:30AM]: sh one_script_to_rule_them_all.sh \" >> /home/jline/ref.txt" |at 05:41
 # Creates a queue of at jobs from 6AM-6AM.
 # Adds  line to status.txt, confirming that jobs for the next day are in the queue.
 at 05:45 < make_night_schedule.sh 
@@ -13,10 +12,10 @@ at 05:45 < make_night_schedule.sh
 # If there are files missing, source do_rsync, but don't clear data. Send email to Aman, Jack, Nichole.
 # Emails are sent at 6:20AM
 
-echo "echo \"It is 6:02AM. Starting to check for missing data files from the last 24 hours.\" >> status.txt" | at 06:02
-echo "sleep 1s && echo \" \" >> status.txt" | at 06:02
+echo "echo \"[6:00AM]: A new day begins \" >> /home/jline/ref.txt" |at 05:41
+echo "echo \"[6:02AM]: Checking for missing data files from the last 24 hours.\" >> /home/jline/ref.txt" | at 06:02
 at 06:03 < check_missing.sh
-at 06:04 < do_rsync_clear_emails.sh
+at 06:04 < do_rsync_clear.sh
 
 # Clean up and get ready for next day
-echo "rm status.txt" | at 06:25
+echo "rm ref.txt" | at 06:25
