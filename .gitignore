@@ -1,4 +1,4 @@
 data/
 data/*
 data/*/*
-home/jline/*.txt
+home/jline/rf*.txt
