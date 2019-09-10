@@ -14,7 +14,7 @@ at 05:45 < make_night_schedule.sh
 # If there are files missing, source do_rsync, but don't clear data. Send email to Aman, Jack, Nichole.
 # Emails are sent at 6:20AM
 
-echo "echo \"[06:00AM]: A new day begins \" >> /home/jline/ref.txt" |at 05:55
+echo "echo \"[06:00AM]: A new day of spying on satellites begins \" >> /home/jline/ref.txt" |at 05:55
 echo "echo \"[06:02AM]: Checking for missing data files from the last 24 hours.\" >> /home/jline/ref.txt" | at 06:02
 at 06:03 < /home/jline/check_missing.sh
 at 06:04 < /home/jline/do_rsync_clear.sh
