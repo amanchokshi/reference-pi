@@ -15,7 +15,7 @@ else
             for i in "rf0XX" "rf0YY" "rf1XX" "rf1YY"; do 
                 
                 if [ ! -f $d/$i* ]; then
-                    echo "$i"_"$TIME".txt" file not found" >> /home/jline/ref.txt
+                    echo `date +'[%H:%M%p]'`": $i"_"$TIME".txt" file not found" >> /home/jline/ref.txt
                 fi    
             
             done
